@@ -20,6 +20,14 @@ public class SearchController {
 
     private JobData jobData = JobData.getInstance();
 
+    public JobData getJobData() {
+        return jobData;
+    }
+
+    public void setJobData(JobData jobData) {
+        this.jobData = jobData;
+    }
+
     @RequestMapping(value = "")
     public String search(Model model) {
         model.addAttribute(new SearchForm());

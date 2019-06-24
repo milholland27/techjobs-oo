@@ -28,6 +28,14 @@ public class ListController {
         return "list";
     }
 
+    public JobData getJobData() {
+        return jobData;
+    }
+
+    public void setJobData(JobData jobData) {
+        this.jobData = jobData;
+    }
+
     @RequestMapping(value = "values")
     public String listColumnValues(Model model, @RequestParam JobFieldType column) {
 

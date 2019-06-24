@@ -85,6 +85,34 @@ public class JobData {
     }
 
 
+    public ArrayList<Job> getJobs() {
+        return jobs;
+    }
+
+    public void setJobs(ArrayList<Job> jobs) {
+        this.jobs = jobs;
+    }
+
+    public static void setInstance(JobData instance) {
+        JobData.instance = instance;
+    }
+
+    public void setEmployers(JobFieldData<Employer> employers) {
+        this.employers = employers;
+    }
+
+    public void setLocations(JobFieldData<Location> locations) {
+        this.locations = locations;
+    }
+
+    public void setCoreCompetencies(JobFieldData<CoreCompetency> coreCompetencies) {
+        this.coreCompetencies = coreCompetencies;
+    }
+
+    public void setPositionTypes(JobFieldData<PositionType> positionTypes) {
+        this.positionTypes = positionTypes;
+    }
+
     private static JobField getFieldByType(Job job, JobFieldType type) {
         switch(type) {
             case EMPLOYER:
@@ -115,4 +143,5 @@ public class JobData {
     public JobFieldData<PositionType> getPositionTypes() {
         return positionTypes;
     }
+
 }
